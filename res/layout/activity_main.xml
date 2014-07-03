@@ -1,0 +1,61 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:background="@drawable/background" >
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical">
+	    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+    
+	<Button
+        android:id="@+id/train_new_gesture"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onTrainButtonPressed"
+        android:textSize="60px"
+        android:text="Train new gesture" />
+	
+	<Button
+        android:id="@+id/edit_gesture"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onEditGesture"
+        android:textSize="60px"
+        android:text="Edit gesture" />
+	
+	<Button
+        android:id="@+id/delete_gesture"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onDeleteGesture"
+        android:textSize="60px"
+        android:text="Delete gesture" />
+	
+	<Button
+        android:id="@+id/settings"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onSettings"
+        android:textSize="60px"
+        android:text="Settings" />
+	
+	<Button
+        android:id="@+id/exit"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onExit"
+        android:textSize="60px"
+        android:text="Exit" />
+	
+	</LinearLayout>
+</ScrollView>
