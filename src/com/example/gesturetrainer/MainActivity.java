@@ -21,6 +21,10 @@ public class MainActivity extends Activity {
 	static Button btnSettings;
 	static Button btnExit;
 	
+	static Intent serviceLink;
+	
+	static MainActivity context;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -36,6 +40,13 @@ public class MainActivity extends Activity {
 		btnDeleteGesture   = (Button)findViewById(R.id.delete_gesture);
 		btnSettings        = (Button)findViewById(R.id.settings);
 		btnExit            = (Button)findViewById(R.id.exit);
+		
+		context = this;
+		
+		serviceLink = new Intent(this, GestureService.class);
+		// potentially add data to the intent
+		serviceLink.putExtra("KEY1", "Value to be used by the service");
+		startService(serviceLink); 
 	}
 	
 	public void mainAnimation(){

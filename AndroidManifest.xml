@@ -41,6 +41,13 @@
             android:name="com.example.gesturetrainer.RecordGesture"
             android:label="@string/title_activity_record_gesture" >
         </activity>
+        
+	    <service
+			 android:name="GestureService"
+			 android:process="gesture_process" 
+			 android:icon="@drawable/ic_launcher"
+			 android:label="Gesture service" >
+		</service> 
     </application>
 
 </manifest>

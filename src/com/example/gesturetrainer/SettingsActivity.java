@@ -38,6 +38,7 @@ class EndProcessListener implements Preference.OnPreferenceClickListener{
 	@Override
 	public boolean onPreferenceClick(Preference p) {
 		Log.v("End service", "yonutix");
+		MainActivity.context.stopService(MainActivity.serviceLink);
 		return true;
 	}
 	
