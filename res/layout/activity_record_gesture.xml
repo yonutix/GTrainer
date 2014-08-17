@@ -11,6 +11,43 @@
     <TextView
         android:id="@+id/record_gesture_text"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Record when text is green" />
+    
+    <Button
+        android:id="@+id/start_recording"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onStartRecording"
+        android:textSize="60px"
+        android:text="Start recording" />
+    
+    <Button
+        android:id="@+id/try_again"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onTryAgain"
+        android:textSize="60px"
+        android:text="Try again" />
+    
+    <Button
+        android:id="@+id/next"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onNext"
+        android:textSize="60px"
+        android:text="Next" />
+    
+    <Button
+        android:id="@+id/enforce"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onEnforce"
+        android:textSize="60px"
+        android:text="Enforce training" />
 
 </RelativeLayout>
