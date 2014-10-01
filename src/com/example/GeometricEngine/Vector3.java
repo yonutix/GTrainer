@@ -4,7 +4,7 @@ import android.hardware.SensorEvent;
 import android.util.Log;
 
 import com.example.Constants.Globals;
-import com.example.SignalProcessing.AccelerometerEvent;
+import com.example.SignalProcessing.AccelerometerListener;
 
 public class Vector3 {
 	public double x;
@@ -18,7 +18,7 @@ public class Vector3 {
 		this.x = x;
 		this.y = y;
 		this.z = z;
-		timestamp = AccelerometerEvent.getTime() - Globals.refTime;
+		timestamp = AccelerometerListener.getTime() - Globals.refTime;
 		//Log.v("yonutix", )
 	}
 	public Vector3(double x, double y, double z) {
@@ -26,7 +26,7 @@ public class Vector3 {
 		this.x = x;
 		this.y = y;
 		this.z = z;
-		timestamp = AccelerometerEvent.getTime() - Globals.refTime;
+		timestamp = AccelerometerListener.getTime() - Globals.refTime;
 	}
 	
 	

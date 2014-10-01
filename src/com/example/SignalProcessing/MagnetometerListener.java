@@ -5,6 +5,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 
+import com.example.Constants.Globals;
 import com.example.GeometricEngine.Vector3;
 
 public class MagnetometerListener implements SensorEventListener{
@@ -18,13 +19,11 @@ public class MagnetometerListener implements SensorEventListener{
 	
 	@Override
 	public void onAccuracyChanged(Sensor sensor, int accuracy) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public void onSensorChanged(SensorEvent event) {
-		if (event.sensor != SignalProcessingEngine.getInstance().magneticSensor)
+		if (event.sensor != Globals.magneticSensor)
 			return;
 
 		float[] rotationMatrix = new float[9];

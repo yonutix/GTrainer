@@ -20,8 +20,7 @@ public class GravityListener implements SensorEventListener{
 
 	@Override
 	public void onAccuracyChanged(Sensor sensor, int accuracy) {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -45,7 +44,6 @@ public class GravityListener implements SensorEventListener{
 		if(values.x > 0){
 			res = -res;
 		}
-	//	Log.v("" + res, "yonutixoz");
 		return  res;
 	}
 	
@@ -60,10 +58,7 @@ public class GravityListener implements SensorEventListener{
 		if(values.z > 0){
 			res = -res;
 		}
-		
-	//	Log.v("" + res, "yonutixox");
-		
-		
+
 		return res;
 	}
 	
@@ -78,7 +73,7 @@ public class GravityListener implements SensorEventListener{
 		if(values.x > 0){
 			res = -res;
 		}
-		//Log.v("" + res, "yonutixoy");
+
 		return res;
 	}
 

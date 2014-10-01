@@ -8,5 +8,6 @@
     <string name="title_activity_choose_app">ChooseAppActivity</string>
     <string name="title_activity_record_gesture">RecordGesture</string>
     <string name="title_activity_visual_link">VisualLinkActivity</string>
+    <string name="title_activity_edit_delete_gesture">EditDeleteGesture</string>
 
 </resources>

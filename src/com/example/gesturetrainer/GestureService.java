@@ -1,14 +1,13 @@
 package com.example.gesturetrainer;
 
+import java.util.ArrayList;
+
 import android.app.Service;
-import android.content.ComponentName;
 import android.content.Intent;
-import android.content.ServiceConnection;
 import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
 
-import com.example.GestureLayer.GestureListener;
 import com.example.GestureLayer.RawGesture;
 import com.example.SignalProcessing.SignalProcessingEngine;
 
@@ -22,12 +21,13 @@ public class GestureService extends Service {
 	public static int runningState;
 
 	public RawGesture refGesture = null;
+	
+	public static ArrayList<RawGesture> allGestures;
 
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
-		Log.v("yonutix", "Service started");
 		runningState = GestureService.RUNNING;
-
+		allGestures = new ArrayList<RawGesture>();
 		return Service.START_NOT_STICKY;
 	}
 

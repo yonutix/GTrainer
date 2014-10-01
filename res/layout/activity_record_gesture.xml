@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,48 +6,49 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".RecordGesture" >
+    tools:context=".RecordGesture"
+    android:orientation="vertical"
+    android:background="@drawable/background" >
 
     <TextView
         android:id="@+id/record_gesture_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="30sp"
         android:text="Record when text is green" />
     
-    <Button
+    <ImageButton
+        android:layout_marginTop="50sp"
         android:id="@+id/start_recording"
         android:layout_gravity="center_vertical|center_horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:onClick="onStartRecording"
-        android:textSize="60px"
-        android:text="Start recording" />
+        android:background="@android:color/transparent"
+        android:src="@drawable/start_recording_selector" />
+
     
-    <Button
-        android:id="@+id/try_again"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onTryAgain"
-        android:textSize="60px"
-        android:text="Try again" />
-    
-    <Button
+    <ImageButton
+        android:layout_marginTop="50sp"
         android:id="@+id/next"
         android:layout_gravity="center_vertical|center_horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:onClick="onNext"
-        android:textSize="60px"
-        android:text="Next" />
+        android:background="@android:color/transparent"
+        android:src="@drawable/next_btn" />
     
-    <Button
-        android:id="@+id/enforce"
+    
+    <ImageButton
+        android:layout_marginTop="50sp"
+        android:id="@+id/delete_last"
         android:layout_gravity="center_vertical|center_horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:onClick="onEnforce"
-        android:textSize="60px"
-        android:text="Enforce training" />
+        android:onClick="onDeleteLast"
+        android:background="@android:color/transparent"
+        android:src="@drawable/del_last" />
+    
 
-</RelativeLayout>
+
+</LinearLayout>

@@ -16,8 +16,7 @@ import android.widget.TextView;
 
 public class AppListAdapter extends ArrayAdapter<String>{
 	private final Activity context;
-	private final String[] web;
-	//private final Integer[] imageId;
+	private final String[] appNames;
 	
 	Vector<Drawable> icons;
 
@@ -25,7 +24,7 @@ public class AppListAdapter extends ArrayAdapter<String>{
 			String[] web, Vector<Drawable> icons) {
 			super(context, R.layout.list_item, web);
 			this.context = context;
-			this.web = web;
+			this.appNames = web;
 			this.icons = new Vector<Drawable>();
 			for(int i = 0; i < icons.size(); ++i){
 				this.icons.add(icons.elementAt(i));
@@ -38,7 +37,7 @@ public class AppListAdapter extends ArrayAdapter<String>{
 		
 		TextView txtTitle = (TextView) rowView.findViewById(R.id.textView);
 		ImageView imageView = (ImageView) rowView.findViewById(R.id.imageView);
-		txtTitle.setText(web[position]);
+		txtTitle.setText(appNames[position]);
 		imageView.setImageBitmap(((BitmapDrawable)icons.elementAt(position)).getBitmap());
 		
 		return rowView;

@@ -16,6 +16,8 @@ public class DumpLog {
 	static File raf;
 	static FileOutputStream fOut;
 	static OutputStreamWriter myOutWriter;
+	
+	static final String LOG_FILE_NAME = "logfile.log";
 
 	private DumpLog() {
 
@@ -24,12 +26,12 @@ public class DumpLog {
 	public static void startSesssion() {
 		try {
 			raf = new File(Environment.getExternalStorageDirectory()
-					.getAbsolutePath() + "/sensor_out.log");
+					.getAbsolutePath() + "/" + LOG_FILE_NAME);
 
 			raf.createNewFile();
 			fOut = new FileOutputStream(Environment
 					.getExternalStorageDirectory().getAbsolutePath()
-					+ "/sensor_out.log");
+					+ "/" + LOG_FILE_NAME);
 			myOutWriter = new OutputStreamWriter(fOut);
 		} catch (Exception e) {
 			Log.v("yonutix", "Exception occured" + e.getMessage());
@@ -75,24 +77,23 @@ public class DumpLog {
 		}
 	}
 
-	public static void log_hr(Vector3 v) {
+	public static void logHr(Vector3 v) {
 		try {
 			myOutWriter.write(v.toString());
 		} catch (Exception e) {
 			Log.v("yonutix", "Exception occured" + e.getMessage());
 		}
 	}
-
-	public static void _log(RawGesture g) {
+	
+	public static void wLog(RawGesture g) {
 		startSesssion();
 
-		for (int i = 0; i < g.acceleration.size(); ++i) {
+		for (int i = 0; i < g.signal.size(); ++i) {
 			try {
 				myOutWriter.write("" + g.normalizedTime.elementAt(i)
-						+ " " + g.acceleration.elementAt(i).x + " "
-						+ g.acceleration.elementAt(i).y + " "
-						+ g.acceleration.elementAt(i).z + "\n");
-				// Log.v("yonutix", "Something to write");
+						+ " " + g.signal.elementAt(i).x + " "
+						+ g.signal.elementAt(i).y + " "
+						+ g.signal.elementAt(i).z + "\n");
 			} catch (Exception e) {
 				Log.v("yonutix", "Exception occured" + e.getMessage());
 			}

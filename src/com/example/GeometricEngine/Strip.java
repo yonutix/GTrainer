@@ -11,7 +11,4 @@ public class Strip {
 		indexedCourves = 0;
 	}
 	
-	public void merge(Vector<Vector3> courve){
-		
-	}
 }
